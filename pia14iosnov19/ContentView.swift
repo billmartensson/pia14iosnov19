@@ -20,7 +20,7 @@ struct ContentView: View {
             VStack {
                 Text("Ny funktion")
             }
-            .padding()
+            .padding(50)
             .background(Color.cyan)
             
             Text("Mer nya saker")
