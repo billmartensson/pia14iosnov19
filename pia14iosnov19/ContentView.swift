@@ -8,25 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var mynumber: Int = 0
+    
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Banan")
-            Text("Mera text")
-            Text("Rad tre")
             
-            VStack {
-                Text("Ny funktion")
+            Text("\(mynumber)")
+                .font(.largeTitle)
+            
+            HStack {
+                Button("PLUS") {
+                    mynumber += 1
+                }
+
+                Button("MINUS") {
+                    mynumber -= 1
+                }
             }
-            .padding()
-            .background(Color.cyan)
+            .padding(20)
             
-            
-            Text("Mer nya saker")
-            
-            Text("Nu är vi klara")
+
         }
         .padding()
     }
